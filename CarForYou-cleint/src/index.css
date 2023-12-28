@@ -35,6 +35,7 @@ body.dark-mode .about-class {
   background-color: black;
   color: white;
 }
+
 body.dark-mode .footer-content {
   background-color: #333;
   color: white;
@@ -89,3 +90,7 @@ h3,h5{
   font-family:Caveat ;
   font-size: 1.3rem;
  }
+
+ .navbar-orange {
+  background-color: orange; 
+}

@@ -55,6 +55,9 @@ const Showcar: FunctionComponent = () => {
         <strong>Kilometers:</strong> {car.km}
       </p>
       <p>
+        <strong>Date:</strong> {car.date}
+      </p>
+      <p>
         <strong>Phone:</strong> {car.phone}
       </p>
       <p>

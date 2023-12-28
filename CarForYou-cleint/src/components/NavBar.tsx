@@ -8,10 +8,11 @@ interface NavBarProps {
   toggleDarkMode: Function;
 }
 
+
 const NavBar: FunctionComponent<NavBarProps> = ({ userInfo, setUserInfo, darkMode, toggleDarkMode }) => {
 
   const navigate = useNavigate();
-
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleLogout = () => {
     sessionStorage.removeItem("userInfo");
@@ -20,7 +21,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ userInfo, setUserInfo, darkMod
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
+    <nav className={`navbar navbar-expand-lg navbar-orange ${darkMode ? 'navbar-dark bg-dark' : 'navbar-orange bg-orange'}`}>
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/Home">
           CarForYou<i className="fa-solid fa-car-side fa-bounce"></i>

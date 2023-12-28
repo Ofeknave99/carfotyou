@@ -17,7 +17,7 @@ Features
 
 User Registration and Login
 User Roles: Admin, Business Owner, Regular User
-Create, Update, and Delete Virtual Business Cards
+Create, Update, and Delete Virtual Business Cars
 Add posts to Favorites
 About Page for Application Information
 Technologies Used
@@ -62,8 +62,8 @@ Choose your user role: admin, business owner, or regular user.
 Explore features: create, update, delete virtual business posts, and add posts to favorites.
 User Roles
 
-Admin: Manage user accounts and business cards for all users.
-Business Owner: Create and manage virtual business cards for their businesses.
+Admin: Manage user accounts and business cars for all users.
+Business Owner: Create and manage virtual business cars for their businesses.
 Regular User: View and add virtual business posts to favorites.
 About
 

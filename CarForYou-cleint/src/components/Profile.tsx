@@ -1,10 +1,9 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import axios from "axios"; // ייבוא מודול axios
+import axios from "axios";
 import NavBar from "./NavBar";
 import User from "../interfaces/User";
-import { getUser } from "../services/UserSevices"; // שיניתי את השם כדי להתאים לשם הקובץ
-
-interface ProfileProps {}
+import { getUser } from "../services/UserSevices";
+interface ProfileProps { }
 
 const Profile: FunctionComponent<ProfileProps> = () => {
   const [userInfo, setUserInfo] = useState<User | null>(null);
@@ -39,4 +38,4 @@ const Profile: FunctionComponent<ProfileProps> = () => {
   );
 };
 
-export default Profile; // וודא שאתה מייצא את הקומפוננטה
+export default Profile; 

@@ -73,6 +73,7 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cars }) => {
       <p>Explore our wide selection of vehicles from trusted sellers.</p>
       <p>Whether you're looking for a family car, a luxury ride, or something sporty, CarForYou has it all.</p>
       <p>Start your journey by browsing our listings below:</p>
+      <p>For more information click on the image</p>
 
       {userInfo.role === 'business' || userInfo.role === 'admin' ? (
         <Link to="/AddCar" className="btn btn-success my-2">
@@ -117,27 +118,18 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cars }) => {
                     <p className="card-text">
                       engine: {car.engine} סמ"ק
                     </p>
-                    <p className="card-text">
-                      horsepower: {car.horsepower} כ"ס
-                    </p>
+
                     <p className="card-text">
                       type gear: {car.typegear}
                     </p>
-                    <p className="card-text">
-                      k"m: {car.km}
-                    </p>
+
                     <p className="card-text">
                       Date: {car.date}
                     </p>
-                    <p className="card-text">
-                      Hand: {car.Hand}
-                    </p>
-                    <p className="card-text">
-                      description: {car.description}
-                    </p>
-                    <hr />
-                    <hr />
-                    <p className="card-text text-success">Phone: {car.phone}</p>
+
+
+
+
                     <hr />
                     <p className="card-text">
                       Address: {car.country} {car.city} {car.street} {car.Hosenumber}

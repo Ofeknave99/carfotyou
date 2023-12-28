@@ -45,10 +45,10 @@ router.get("/", async (req, res) => {
 // Get my cars
 router.get("/MyCar", auth, async (req, res) => {
   try {
-    const cars = await Car.find({ owner: req.payload.email }); // שינוי מ-Card ל-Car
+    const cars = await Car.find({ owner: req.payload.email }); 
     if (!cars || cars.length === 0)
       return res.status(400).send("There are no tickets");
-    res.status(200).send(cars); // שינוי מ-cards ל-cars
+    res.status(200).send(cars); 
   } catch (error) {
     res.status(400).send(error);
   }
@@ -57,10 +57,10 @@ router.get("/MyCar", auth, async (req, res) => {
 // Get car by _id
 router.get("/:_id", async (req, res) => {
   try {
-    const car = await Car.findOne({ _id: req.params._id }); // שינוי מ-Card ל-Car
+    const car = await Car.findOne({ _id: req.params._id }); 
     if (!car)
       return res.status(400).send("The car details are not available");
-    res.status(200).send(car); // שינוי מ-card ל-car
+    res.status(200).send(car); 
   } catch (error) {
     res.status(400).send(error);
   }
@@ -72,19 +72,19 @@ router.post("/", auth, async (req, res) => {
       return res.status(400).send("הכרטיס נכשל");
 
     // Joi validation
-    const { error } = carSchema.validate(req.body); // שינוי מ-cardSchema ל-carSchema
+    const { error } = carSchema.validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     // Check if car exists by title and owner
-    const car = await Car.findOne({ title: req.body.title, owner: req.body.owner }); // שינוי מ-Card ל-Car
-    if (car) return res.status(400).send("Car already exists"); // שינוי מ-card ל-car
+    const car = await Car.findOne({ title: req.body.title, owner: req.body.owner }); 
+    if (car) return res.status(400).send("Car already exists"); 
 
     // Add the new car and save
-    const newCar = new Car(req.body); // שינוי מ-Card ל-Car
+    const newCar = new Car(req.body); 
     await newCar.save();
 
     // Return response
-    res.status(201).send(`Car "${newCar.title}" added successfully.`); // שינוי מ-Card ל-Car
+    res.status(201).send(`Car "${newCar.title}" added successfully.`); 
   } catch (error) {
     res.status(400).send(error);
   }
@@ -96,18 +96,18 @@ router.put("/:_id", auth, async (req, res) => {
     if (req.payload.role !== "admin" && req.payload.email !== req.body.owner)
       return res
         .status(400)
-        .send("Only Admin or busniess"); // שינוי מ-card ל-car
+        .send("Only Admin or busniess"); 
 
     // 1. Joi validation
-    const { error } = carSchema.validate(req.body); // שינוי מ-cardSchema ל-carSchema
+    const { error } = carSchema.validate(req.body); 
     if (error) return res.status(400).send(error.details[0].message);
 
     // 2. Verify & Update car by req _id
-    const car = await Car.findByIdAndUpdate(req.params._id, req.body, { new: true }); // שינוי מ-Card ל-Car
-    if (!car) return res.status(400).send("No such car"); // שינוי מ-card ל-car
+    const car = await Car.findByIdAndUpdate(req.params._id, req.body, { new: true }); 
+    if (!car) return res.status(400).send("No such car"); 
 
     // 3. Return response
-    res.status(200).send(`${car.title} updated successfully!!`); // שינוי מ-Card ל-Car
+    res.status(200).send(`${car.title} updated successfully!!`); 
   } catch (error) {
     res.status(400).send(error);
   }
@@ -116,9 +116,9 @@ router.put("/:_id", auth, async (req, res) => {
 // Delete car
 router.delete("/:_id", async (req, res) => {
   try {
-    const car = await Car.findByIdAndDelete(req.params._id); // שינוי מ-Card ל-Car
-    if (!car) return res.status(400).send("This car does not exist"); // שינוי מ-card ל-car
-    res.status(200).send(car); // שינוי מ-card ל-car
+    const car = await Car.findByIdAndDelete(req.params._id); 
+    if (!car) return res.status(400).send("This car does not exist"); 
+    res.status(200).send(car);
   } catch (error) {
     res.status(400).send(error);
   }

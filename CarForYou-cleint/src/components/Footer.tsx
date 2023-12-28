@@ -26,7 +26,7 @@ const Footer: FunctionComponent<FooterProps> = ({ userInfo }) => {
           <Link to="/Fav" className="about-link mx-3">
             <i className="fa-solid fa-heart"></i>
             <br />
-            FAV
+            Want car
           </Link>
         )}
       </div>

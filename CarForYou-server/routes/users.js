@@ -50,7 +50,7 @@ router.post("/", async (req, res) => {
 
     await user.save();
 
-/*  */  // 5. create user card
+/*  */  // 5. create user car
    let favs = new fav({ userId: user._id, cars: [], });
 
     await favs.save();  
