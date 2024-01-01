@@ -181,6 +181,14 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cars }) => {
                       </a>
                     </button>
                   </div>
+                  <div className="whatsapplink">
+                    <a
+                      href="
+                      https://api.whatsapp.com/send?phone=972502198505"><i
+                        className="fa-brands fa-whatsapp fa-2xl" ></i>
+                      נתקלתם בבעיה. צרו איתנו קשר
+                    </a>
+                  </div>
                 </div>
               )
             })}

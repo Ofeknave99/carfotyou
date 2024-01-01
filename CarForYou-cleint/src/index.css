@@ -12,6 +12,9 @@ body{
    color: rgb(255, 255, 255);
    
 }
+
+
+
 .dark-mode .about-class  {
   background-color: black;
   color: white;
@@ -94,3 +97,32 @@ h3,h5{
  .navbar-orange {
   background-color: orange; 
 }
+ .whatsapplink {
+            position: fixed;
+            bottom:40px; /* מרחק מהתחתית */
+            right: 20px; /* מרחק מצד ימין */
+            font-size: 18px;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            background-color: #ededed;
+            color: #141313;
+            border-radius: 30px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .whatsapplink i {
+            margin-right: 10px;
+        }
+
+        .whatsapplink:hover {
+            transform: translateY(-5px); /* הזזת הקישור למעלה בעת ההעברה */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapplink a {
+            color: #000000;
+            text-decoration: none;
+        }

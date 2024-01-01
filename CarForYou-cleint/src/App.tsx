@@ -18,6 +18,7 @@ import UpdateCar from './components/UpdateCar';
 import SenBox from './components/SenBox';
 import ShowCar from './components/Showcar';
 import Showcar from './components/Showcar';
+import Chat from './components/Chat';
 
 interface UserInfo {
   email: string | false;
@@ -58,6 +59,7 @@ const App: FunctionComponent = () => {
           <Route path="/AddCar" element={<AddCar userInfo={userInfo} />} />
           <Route path="/update/Car/:id" element={<UpdateCar />} />
           <Route path="/Fav" element={<Fav userInfo={userInfo} />} />
+          <Route path="/Chat" element={<Chat />} />
         </Routes>
         <Footer userInfo={userInfo} />
       </Router>

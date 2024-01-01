@@ -5,8 +5,7 @@ import Car from "../interfaces/Car";
 import * as yup from "yup";
 import { successMsg } from "../services/feedbackServicw";
 import { useFormik } from "formik";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+
 
 
 interface UpdateCarProps { }
