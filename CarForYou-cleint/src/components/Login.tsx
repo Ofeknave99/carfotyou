@@ -47,8 +47,10 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo }) => {
           navigate("/Home");
 
         })
-        .catch((err) => console.log(err));
-      errorMsg(`login is error try agin`)
+        .catch((err) => {
+          console.log(err);
+          errorMsg(`login is error try again`);
+        });
     },
   })
 
