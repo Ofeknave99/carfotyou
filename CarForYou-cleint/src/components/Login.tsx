@@ -13,7 +13,7 @@ interface LoginProps {
 
 const Login: FunctionComponent<LoginProps> = ({ setUserInfo }) => {
   let navigate = useNavigate();
-  
+
 
   let formik = useFormik({
     initialValues: { email: "", password: "" },
@@ -22,42 +22,43 @@ const Login: FunctionComponent<LoginProps> = ({ setUserInfo }) => {
       password: yup.string().required().min(8),
     }),
     onSubmit: (values) => {
-     checkUser({
-       name: "",
-       lastName:"",
-       password: values.password,
-       email: values.email,
-       phone: "",
-       image: "",
-       city: "",
-       housenumber: 0,
-       country: "",
-       street: ""
-     })
-.then((res) => {
-                    sessionStorage.setItem("token", JSON.stringify({ token: res.data }))
-                    sessionStorage.setItem("userInfo", JSON.stringify({
-                        email: (getTokenDetails() as any).email,
-                        userId: (getTokenDetails() as any)._id,
-                        role: (getTokenDetails() as any).role,
-                        
-                    }))
-                    setUserInfo(JSON.parse(sessionStorage.getItem("userInfo") as string))
-                    successMsg(`Login successful ${values.email}`);
-                    navigate("/Home");
+      checkUser({
+        name: "",
+        lastName: "",
+        password: values.password,
+        email: values.email,
+        phone: "",
+        image: "",
+        city: "",
+        housenumber: 0,
+        country: "",
+        street: ""
+      })
+        .then((res) => {
+          sessionStorage.setItem("token", JSON.stringify({ token: res.data }))
+          sessionStorage.setItem("userInfo", JSON.stringify({
+            email: (getTokenDetails() as any).email,
+            userId: (getTokenDetails() as any)._id,
+            role: (getTokenDetails() as any).role,
 
-                })
-                .catch((err) => console.log(err));
-        },
-    })
+          }))
+          setUserInfo(JSON.parse(sessionStorage.getItem("userInfo") as string))
+          successMsg(`Login successful ${values.email}`);
+          navigate("/Home");
 
-  
-   
+        })
+        .catch((err) => console.log(err));
+      errorMsg(`login is error try agin`)
+    },
+  })
+
+
+
 
 
   return (
     <>
-   
+
       <h3 className="display-3 mt-">LOGIN</h3>
       <div className="container col-md-3 mt-5 vh-100  vw-100 ">
         <form onSubmit={formik.handleSubmit}>
