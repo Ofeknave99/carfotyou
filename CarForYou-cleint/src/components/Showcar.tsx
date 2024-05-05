@@ -23,7 +23,7 @@ const Showcar: FunctionComponent = () => {
     <div
       className="container col-md-6 mt-5 d-flex flex-column align-items-center justify-content-center"
       style={{
-        backgroundColor: '#2c3e50',
+
         boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.2)',
         borderRadius: '8px',
         padding: '16px',

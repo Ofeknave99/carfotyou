@@ -47,7 +47,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ userInfo, setUserInfo, darkMod
             {(userInfo.role === "business" || userInfo.role === "regular" || userInfo.role === "admin") && (
               <li className="nav-item">
                 <NavLink className="nav-link" to="/Fav">
-                  Want Car
+                  WANT CAR
                 </NavLink>
               </li>
             )}
@@ -64,7 +64,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({ userInfo, setUserInfo, darkMod
               <>
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/Chat">
-                    Fqa
+                    FQA
                   </NavLink>
                 </li>
               </>
