@@ -68,13 +68,20 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cars }) => {
 
   return (
     <>
-      <h1>Welcome to CarForYou <i className="fa-solid fa-car fa-beat"></i></h1>
-      <p>Discover a world of amazing cars waiting for you!</p>
-      <p>Explore our wide selection of vehicles from trusted sellers.</p>
-      <p>Whether you're looking for a family car, a luxury ride, or something sporty, CarForYou has it all.</p>
-      <p>Start your journey by browsing our listings below:</p>
-      <p>For more information click on the image</p>
-
+      <div className='first'>
+        <div className="video-background">
+          <video autoPlay muted loop>
+            <source src="https://cdn.pixabay.com/video/2023/09/21/181537-866999852_large.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <h1>Welcome to CarForYou <i className="fa-solid fa-car fa-beat"></i></h1>
+        <p>Discover a world of amazing cars waiting for you!</p>
+        <p>Explore our wide selection of vehicles from trusted sellers.</p>
+        <p>Whether you're looking for a family car, a luxury ride, or something sporty, CarForYou has it all.</p>
+        <p>Start your journey by browsing our listings below:</p>
+        <p>For more information click on the image</p>
+      </div >
       {userInfo.role === 'business' || userInfo.role === 'admin' ? (
         <Link to="/AddCar" className="btn btn-success my-2">
           Add Car <i className="fa-solid fa-car fa-beat"></i>
@@ -181,6 +188,7 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cars }) => {
                       </a>
                     </button>
                   </div>
+
                   <div className="whatsapplink">
                     <a
                       href="
@@ -194,6 +202,7 @@ const Home: FunctionComponent<HomeProps> = ({ userInfo, cars }) => {
             })}
           </div>
         </div>
+
       ) : (
         <p>No cars</p>
       )}

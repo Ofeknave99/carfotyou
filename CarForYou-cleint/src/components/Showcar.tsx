@@ -23,12 +23,13 @@ const Showcar: FunctionComponent = () => {
     <div
       className="container col-md-6 mt-5 d-flex flex-column align-items-center justify-content-center"
       style={{
-
-        boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.2)',
-        borderRadius: '8px',
-        padding: '16px',
-        color: 'white',
+        backgroundColor: "#8888889c", // צבע רקע עם rgba
+        boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.2)', // צל
+        borderRadius: '8px', // פינות מעגליות
+        padding: '16px', // מרווח פנימי
+        color: 'white', // צבע טקסט
       }}
+
     >
       <h1>{car.title}</h1>
       <img

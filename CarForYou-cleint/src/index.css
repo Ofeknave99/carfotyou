@@ -3,16 +3,15 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Caveat&family=IBM+Plex+Sans:ital,wght@1,100&family=Rubik+Wet+Paint&display=swap');
 
-body{
-  background-image: url(./jorgen-hendriksen-5KiWbxxjucc-unsplash.jpg);
- /*  background-color: #999999; */
+body {
+  background-image: linear-gradient(#8888889c, #8888889c), url(./jorgen-hendriksen-5KiWbxxjucc-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-   margin-bottom: 40px;
-   height: 100%;
-   color: rgb(255, 255, 255);
-   
+  margin-bottom: 40px;
+  height: 100%;
+  color: rgb(255, 255, 255);
 }
+
 
 
 
@@ -44,6 +43,38 @@ body.dark-mode .footer-content {
   background-color: #333;
   color: white;
 }
+   .first {
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .video-background {
+      background-color: #8888889c;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(5px); /* פילטר לטשטוש */
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -53,6 +84,7 @@ body.dark-mode .footer-content {
  font-size: 10px;
 }
 .about-class {
+   background-color:#8888889c;
   font-size: 27px;
   padding: 20px;
   font-family:Caveat ;
@@ -97,9 +129,21 @@ h3,h5{
  }
 
  .navbar-orange {
-  background-color:#8888889c; 
- 
+  background-color: rgba(136, 136, 136, 0.6); /* שימוש בצבע אפור ובערפל */
+  backdrop-filter: blur(5px); /* אפקט של טשטוש לרקע */
+opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100%;
+
 }
+.navbar-orange .nav-link,
+.navbar-orange .navbar-brand,
+.navbar-orange .btn {
+  color: white !important; /* שינוי הצבע ללבן */
+}
+
+
  .whatsapplink {
             position: fixed;
             bottom:40px; /* מרחק מהתחתית */
